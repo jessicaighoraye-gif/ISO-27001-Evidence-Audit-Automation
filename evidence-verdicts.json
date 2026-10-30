@@ -1,0 +1,411 @@
+[
+  {
+    "test_id": "AT-01",
+    "control_id": "A.5.15",
+    "rule_id": "MINOR-OPERATING",
+    "verdict": "minor_nc",
+    "failed_sample_ids": [],
+    "affected_unit_ids": [
+      "excluded-emergency-accounts"
+    ],
+    "evidence_locators": [
+      "evidence-pack.md::Identity export[bullet=3]"
+    ],
+    "facts": {
+      "affected_units": 1,
+      "failed_required_samples": 1,
+      "population_or_required_procedure_unavailable": false,
+      "prior_major_open_or_repeated": false,
+      "required_control_design_missing": false,
+      "required_evidence_stale_missing_or_hash_failed": false
+    }
+  },
+  {
+    "test_id": "AT-02",
+    "control_id": "A.5.16",
+    "rule_id": "MINOR-OPERATING",
+    "verdict": "minor_nc",
+    "failed_sample_ids": [
+      "n.adamu",
+      "vendor-backup"
+    ],
+    "affected_unit_ids": [
+      "n.adamu",
+      "vendor-backup"
+    ],
+    "evidence_locators": [
+      "evidence-pack.md::Identity export[bullet=4]"
+    ],
+    "facts": {
+      "affected_units": 1,
+      "failed_required_samples": 1,
+      "population_or_required_procedure_unavailable": false,
+      "prior_major_open_or_repeated": false,
+      "required_control_design_missing": false,
+      "required_evidence_stale_missing_or_hash_failed": false
+    }
+  },
+  {
+    "test_id": "AT-03",
+    "control_id": "A.5.18",
+    "rule_id": "MAJOR-SYSTEMIC",
+    "verdict": "major_nc",
+    "failed_sample_ids": [
+      "IAM-4412",
+      "IAM-5031"
+    ],
+    "affected_unit_ids": [
+      "IAM-4412",
+      "IAM-5031"
+    ],
+    "evidence_locators": [
+      "evidence-pack.md::Access-review tickets[id=IAM-4412]",
+      "evidence-pack.md::Access-review tickets[id=IAM-5031]"
+    ],
+    "facts": {
+      "affected_units": 2,
+      "failed_required_samples": 2,
+      "population_or_required_procedure_unavailable": false,
+      "prior_major_open_or_repeated": false,
+      "required_control_design_missing": false,
+      "required_evidence_stale_missing_or_hash_failed": false
+    }
+  },
+  {
+    "test_id": "AT-04",
+    "control_id": "A.5.19",
+    "rule_id": "MAJOR-DESIGN",
+    "verdict": "major_nc",
+    "failed_sample_ids": [],
+    "affected_unit_ids": [
+      "HelpSphere"
+    ],
+    "evidence_locators": [
+      "evidence-pack.md::Supplier evidence[bullet=3]"
+    ],
+    "facts": {
+      "affected_units": 0,
+      "failed_required_samples": 0,
+      "population_or_required_procedure_unavailable": false,
+      "prior_major_open_or_repeated": false,
+      "required_control_design_missing": true,
+      "required_evidence_stale_missing_or_hash_failed": false
+    }
+  },
+  {
+    "test_id": "AT-05",
+    "control_id": "A.5.24",
+    "rule_id": "MINOR-EVIDENCE",
+    "verdict": "minor_nc",
+    "failed_sample_ids": [
+      "IR-EX-2025-02"
+    ],
+    "affected_unit_ids": [
+      "IR-EX-2025-02"
+    ],
+    "evidence_locators": [
+      "evidence-pack.md::Incident evidence[id=IR-EX-2025-02]"
+    ],
+    "facts": {
+      "affected_units": 0,
+      "failed_required_samples": 0,
+      "population_or_required_procedure_unavailable": false,
+      "prior_major_open_or_repeated": false,
+      "required_control_design_missing": false,
+      "required_evidence_stale_missing_or_hash_failed": true
+    }
+  },
+  {
+    "test_id": "AT-06",
+    "control_id": "A.5.30",
+    "rule_id": "MAJOR-RECURRENCE",
+    "verdict": "major_nc",
+    "failed_sample_ids": [
+      "NC-25-02"
+    ],
+    "affected_unit_ids": [
+      "restore-report-2024"
+    ],
+    "evidence_locators": [
+      "evidence-pack.md::ICT continuity and backup evidence[bullet=3]",
+      "evidence-pack.md::ICT continuity and backup evidence[bullet=4]"
+    ],
+    "facts": {
+      "affected_units": 0,
+      "failed_required_samples": 0,
+      "population_or_required_procedure_unavailable": false,
+      "prior_major_open_or_repeated": true,
+      "required_control_design_missing": false,
+      "required_evidence_stale_missing_or_hash_failed": false
+    }
+  },
+  {
+    "test_id": "AT-07",
+    "control_id": "A.6.3",
+    "rule_id": "MINOR-OPERATING",
+    "verdict": "minor_nc",
+    "failed_sample_ids": [
+      "secure-dev-training-roster"
+    ],
+    "affected_unit_ids": [
+      "secure-dev-training-roster"
+    ],
+    "evidence_locators": [
+      "evidence-pack.md::Awareness evidence[bullet=3]"
+    ],
+    "facts": {
+      "affected_units": 1,
+      "failed_required_samples": 1,
+      "population_or_required_procedure_unavailable": false,
+      "prior_major_open_or_repeated": false,
+      "required_control_design_missing": false,
+      "required_evidence_stale_missing_or_hash_failed": false
+    }
+  },
+  {
+    "test_id": "AT-08",
+    "control_id": "A.8.5",
+    "rule_id": "MAJOR-RECURRENCE",
+    "verdict": "major_nc",
+    "failed_sample_ids": [
+      "NC-25-01"
+    ],
+    "affected_unit_ids": [
+      "excluded-emergency-accounts"
+    ],
+    "evidence_locators": [
+      "evidence-pack.md::Identity export[bullet=3]"
+    ],
+    "facts": {
+      "affected_units": 0,
+      "failed_required_samples": 0,
+      "population_or_required_procedure_unavailable": false,
+      "prior_major_open_or_repeated": true,
+      "required_control_design_missing": false,
+      "required_evidence_stale_missing_or_hash_failed": false
+    }
+  },
+  {
+    "test_id": "AT-09",
+    "control_id": "A.8.8",
+    "rule_id": "MINOR-OPERATING",
+    "verdict": "minor_nc",
+    "failed_sample_ids": [
+      "VULN-882"
+    ],
+    "affected_unit_ids": [
+      "VULN-882"
+    ],
+    "evidence_locators": [
+      "evidence-pack.md::Vulnerability evidence[id=VULN-882]"
+    ],
+    "facts": {
+      "affected_units": 1,
+      "failed_required_samples": 1,
+      "population_or_required_procedure_unavailable": false,
+      "prior_major_open_or_repeated": false,
+      "required_control_design_missing": false,
+      "required_evidence_stale_missing_or_hash_failed": false
+    }
+  },
+  {
+    "test_id": "AT-10",
+    "control_id": "A.8.13",
+    "rule_id": "MAJOR-RECURRENCE",
+    "verdict": "major_nc",
+    "failed_sample_ids": [
+      "NC-25-02"
+    ],
+    "affected_unit_ids": [
+      "restore-report-2024"
+    ],
+    "evidence_locators": [
+      "evidence-pack.md::ICT continuity and backup evidence[bullet=3]"
+    ],
+    "facts": {
+      "affected_units": 0,
+      "failed_required_samples": 0,
+      "population_or_required_procedure_unavailable": false,
+      "prior_major_open_or_repeated": true,
+      "required_control_design_missing": false,
+      "required_evidence_stale_missing_or_hash_failed": false
+    }
+  },
+  {
+    "test_id": "AT-11",
+    "control_id": "A.8.15",
+    "rule_id": "MINOR-OPERATING",
+    "verdict": "minor_nc",
+    "failed_sample_ids": [
+      "billing-worker-host"
+    ],
+    "affected_unit_ids": [
+      "billing-worker-host"
+    ],
+    "evidence_locators": [
+      "evidence-pack.md::Logging evidence[bullet=3]"
+    ],
+    "facts": {
+      "affected_units": 1,
+      "failed_required_samples": 1,
+      "population_or_required_procedure_unavailable": false,
+      "prior_major_open_or_repeated": false,
+      "required_control_design_missing": false,
+      "required_evidence_stale_missing_or_hash_failed": false
+    }
+  },
+  {
+    "test_id": "AT-12",
+    "control_id": "A.8.32",
+    "rule_id": "MINOR-OPERATING",
+    "verdict": "minor_nc",
+    "failed_sample_ids": [
+      "CHG-2281"
+    ],
+    "affected_unit_ids": [
+      "CHG-2281"
+    ],
+    "evidence_locators": [
+      "evidence-pack.md::Change sample[id=CHG-2281]"
+    ],
+    "facts": {
+      "affected_units": 1,
+      "failed_required_samples": 1,
+      "population_or_required_procedure_unavailable": false,
+      "prior_major_open_or_repeated": false,
+      "required_control_design_missing": false,
+      "required_evidence_stale_missing_or_hash_failed": false
+    }
+  },
+  {
+    "test_id": "AT-13",
+    "control_id": "A.5.24",
+    "rule_id": "MINOR-OPERATING",
+    "verdict": "minor_nc",
+    "failed_sample_ids": [
+      "IR-2026-06-06-lessons-learned"
+    ],
+    "affected_unit_ids": [
+      "IR-2026-06-06"
+    ],
+    "evidence_locators": [
+      "evidence-pack.md::Incident evidence[bullet=3]"
+    ],
+    "facts": {
+      "affected_units": 1,
+      "failed_required_samples": 1,
+      "population_or_required_procedure_unavailable": false,
+      "prior_major_open_or_repeated": false,
+      "required_control_design_missing": false,
+      "required_evidence_stale_missing_or_hash_failed": false
+    }
+  },
+  {
+    "test_id": "AT-14",
+    "control_id": "A.6.3",
+    "rule_id": "MINOR-OPERATING",
+    "verdict": "minor_nc",
+    "failed_sample_ids": [],
+    "affected_unit_ids": [
+      "overdue-awareness-15-workers"
+    ],
+    "evidence_locators": [
+      "evidence-pack.md::Awareness evidence[bullet=2]"
+    ],
+    "facts": {
+      "affected_units": 1,
+      "failed_required_samples": 1,
+      "population_or_required_procedure_unavailable": false,
+      "prior_major_open_or_repeated": false,
+      "required_control_design_missing": false,
+      "required_evidence_stale_missing_or_hash_failed": false
+    }
+  },
+  {
+    "test_id": "AT-15",
+    "control_id": "A.8.8",
+    "rule_id": "MINOR-OPERATING",
+    "verdict": "minor_nc",
+    "failed_sample_ids": [],
+    "affected_unit_ids": [
+      "six-high-severity-vulns"
+    ],
+    "evidence_locators": [
+      "evidence-pack.md::Vulnerability evidence[bullet=5]"
+    ],
+    "facts": {
+      "affected_units": 1,
+      "failed_required_samples": 1,
+      "population_or_required_procedure_unavailable": false,
+      "prior_major_open_or_repeated": false,
+      "required_control_design_missing": false,
+      "required_evidence_stale_missing_or_hash_failed": false
+    }
+  },
+  {
+    "test_id": "AT-16",
+    "control_id": "A.8.32",
+    "rule_id": "MINOR-OPERATING",
+    "verdict": "minor_nc",
+    "failed_sample_ids": [
+      "CHG-2344"
+    ],
+    "affected_unit_ids": [
+      "CHG-2344"
+    ],
+    "evidence_locators": [
+      "evidence-pack.md::Change sample[id=CHG-2344]"
+    ],
+    "facts": {
+      "affected_units": 1,
+      "failed_required_samples": 1,
+      "population_or_required_procedure_unavailable": false,
+      "prior_major_open_or_repeated": false,
+      "required_control_design_missing": false,
+      "required_evidence_stale_missing_or_hash_failed": false
+    }
+  },
+  {
+    "test_id": "AT-17",
+    "control_id": "A.8.15",
+    "rule_id": "MINOR-OPERATING",
+    "verdict": "minor_nc",
+    "failed_sample_ids": [],
+    "affected_unit_ids": [
+      "identity-audit-log-retention"
+    ],
+    "evidence_locators": [
+      "evidence-pack.md::Logging evidence[bullet=4]"
+    ],
+    "facts": {
+      "affected_units": 1,
+      "failed_required_samples": 1,
+      "population_or_required_procedure_unavailable": false,
+      "prior_major_open_or_repeated": false,
+      "required_control_design_missing": false,
+      "required_evidence_stale_missing_or_hash_failed": false
+    }
+  },
+  {
+    "test_id": "AT-18",
+    "control_id": "A.5.19",
+    "rule_id": "MINOR-OPERATING",
+    "verdict": "minor_nc",
+    "failed_sample_ids": [],
+    "affected_unit_ids": [
+      "HelpSphere"
+    ],
+    "evidence_locators": [
+      "evidence-pack.md::Supplier evidence[bullet=3]",
+      "evidence-pack.md::Interview notes[speaker=Procurement Analyst]"
+    ],
+    "facts": {
+      "affected_units": 1,
+      "failed_required_samples": 1,
+      "population_or_required_procedure_unavailable": false,
+      "prior_major_open_or_repeated": false,
+      "required_control_design_missing": false,
+      "required_evidence_stale_missing_or_hash_failed": false
+    }
+  }
+]

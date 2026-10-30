@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "verdict-output.schema.json",
+  "title": "Verdict Output",
+  "description": "One generated verdict record, matching output_requirements in severity-rules.yaml.",
+  "type": "object",
+  "required": ["rule_id", "control_id", "verdict", "failed_sample_ids", "affected_unit_ids", "evidence_locators"],
+  "additionalProperties": false,
+  "properties": {
+    "rule_id": { "type": "string", "enum": ["MAJOR-DESIGN", "MAJOR-SYSTEMIC", "MAJOR-RECURRENCE", "MINOR-OPERATING", "MINOR-EVIDENCE", "NOT-TESTED", "CONFORMS"] },
+    "control_id": { "type": "string", "minLength": 1 },
+    "verdict": { "type": "string", "enum": ["not_tested", "conforms", "minor_nc", "major_nc"] },
+    "failed_sample_ids": { "type": "array", "items": { "type": "string" } },
+    "affected_unit_ids": { "type": "array", "items": { "type": "string" } },
+    "evidence_locators": { "type": "array", "items": { "type": "string" } }
+  }
+}

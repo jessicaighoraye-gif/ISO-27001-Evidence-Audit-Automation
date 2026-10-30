@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "test-record.schema.json",
+  "title": "Audit Test Record",
+  "description": "One row of audit-test-sheet.csv, one per executed test.",
+  "type": "object",
+  "required": ["test_id", "control_id", "audit_criterion", "test_procedure", "sample", "artifact", "exact_locator", "evidence_quality", "result", "nonconformity_id", "limitation"],
+  "additionalProperties": false,
+  "properties": {
+    "test_id": { "type": "string", "minLength": 1 },
+    "control_id": { "type": "string", "minLength": 1 },
+    "audit_criterion": { "type": ["string", "null"] },
+    "test_procedure": { "type": ["string", "null"] },
+    "sample": { "type": ["string", "null"] },
+    "artifact": { "type": ["string", "null"] },
+    "exact_locator": { "type": ["string", "null"] },
+    "evidence_quality": { "type": ["string", "null"] },
+    "result": { "type": ["string", "null"], "enum": ["not_tested", "conforms", "minor_nc", "major_nc", null] },
+    "nonconformity_id": { "type": ["string", "null"] },
+    "limitation": { "type": ["string", "null"] }
+  }
+}

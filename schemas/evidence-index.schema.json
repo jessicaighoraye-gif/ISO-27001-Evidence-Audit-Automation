@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "evidence-index.schema.json",
+  "title": "Evidence Index Row",
+  "description": "One row of evidence-index.csv, matching evidence-index-template.csv.",
+  "type": "object",
+  "required": ["claim_id", "report_section", "claim", "artifact_path", "exact_locator", "collection_time_utc", "sha256", "proves", "does_not_prove", "confidence", "alternative_considered", "disposition"],
+  "additionalProperties": false,
+  "properties": {
+    "claim_id": { "type": "string", "minLength": 1 },
+    "report_section": { "type": ["string", "null"] },
+    "claim": { "type": ["string", "null"] },
+    "artifact_path": { "type": ["string", "null"] },
+    "exact_locator": { "type": ["string", "null"] },
+    "collection_time_utc": { "type": ["string", "null"], "format": "date-time" },
+    "sha256": { "type": ["string", "null"] },
+    "proves": { "type": ["string", "null"] },
+    "does_not_prove": { "type": ["string", "null"] },
+    "confidence": { "type": "string", "enum": ["high", "medium", "low"] },
+    "alternative_considered": { "type": ["string", "null"] },
+    "disposition": { "type": ["string", "null"] }
+  }
+}

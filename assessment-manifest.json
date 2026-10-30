@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "project_id": "GRC-A3",
+  "variant": "V4",
+  "candidate_binding": "UBI-2026-0030",
+  "assigned_pack": {
+    "file_name": "grc-stage-7-shared-b1.tar.gz",
+    "sha256": "7f2e8fc437405b251d7a963f73241b56eec72b0297435c4d4aab43170dc2cd4e",
+    "manifest_signature": "a602bc7be32d7bbd996279a395326dfc778ae764653dc1f1b695a7629e015785",
+    "verified_before_use": true
+  },
+  "commit": "01263a3abd84994b3fd89afd8e5b028200719d0f",
+  "supported_environment": {
+    "os": "Windows 10 pro",
+    "cpu": "Intel Core i5-4200U",
+    "memory_gb": "8.00 GB (7.88 GB usable)",
+    "tool_versions": {
+      "python": "3.10.7",
+      "jsonschema": "4.26.0",
+      "pyyaml": "6.0.3",
+      "pytest": "9.1.1"
+    }
+  },
+  "commands": {
+    "provision": "py -m venv .venv; .venv\\Scripts\\Activate.ps1; py -m pip install jsonschema pyyaml pytest",
+    "build": "py .\\audit-engine\\run_sampling.py; py .\\audit-engine\\generate_verdicts.py; py .\\audit-engine\\generate_test_sheet.py; py .\\audit-engine\\generate_nc_register.py; py .\\audit-engine\\generate_evidence_index.py",
+    "test": "py -m pytest tests\\ -v",
+    "clean": "Remove-Item sample-manifest.csv, evidence-verdicts.json, audit-test-sheet.csv, nonconformity-register.csv, evidence-index.csv -ErrorAction SilentlyContinue"
+  },
+  "results": {
+    "public_tests": {
+      "passed": 34,
+      "failed": 0,
+      "report": "tests/ (pytest -q console output; no separate report file generated)"
+    },
+    "runtime_seconds": 13.39,
+    "peak_memory_mb": "unknown",
+    "output_hashes": {
+      "evidence-verdicts.json": "d533e0fdca73f93b2536bbad927b838ec4b89136c6b521a461b6e573dfa686ac"
+      
+  },
+  "inputs": [
+    "evidence-pack-source/audit-populations.csv",
+    "evidence-pack-source/public-fixtures.json",
+    "evidence-pack-source/severity-rules.yaml",
+    "evidence-pack-source/evidence-pack.md"
+  ],
+  "outputs": [
+    "sample-manifest.csv",
+    "evidence-verdicts.json",
+    "internal-audit-report.pdf",
+    "audit-test-sheet.csv",
+    "nonconformity-register.csv",
+    "prior-findings-tracker.csv",
+    "management-letter.pdf",
+    "evidence-index.csv"
+  ],
+  "manual_preconditions": [
+    "jsonschema, pyyaml, and pytest must be installed via 'py -m pip install' (not plain 'pip install') to avoid multiple-Python PATH mismatches on Windows."
+  ],
+  "known_limitations": [
+    "Published per-population sample sizes were not issued; a disclosed placeholder (99) is used instead. See README.md.",
+    "normalize_timestamp() does not handle 'Z'-suffixed timestamps on Python 3.10; sample-manifest.csv's event_time_utc column is not a true UTC conversion for affected rows. See README.md."
+  ]
+}
+}

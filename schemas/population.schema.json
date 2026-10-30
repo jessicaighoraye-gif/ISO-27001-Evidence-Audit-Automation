@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "population.schema.json",
+  "title": "Population Record",
+  "description": "One row from a population export (access, training, vulnerability, backup, or change).",
+  "type": "object",
+  "required": ["population", "record_id", "owner", "status", "event_time", "scope", "source_locator"],
+  "additionalProperties": false,
+  "properties": {
+    "population": { "type": "string", "enum": ["access", "training", "vulnerability", "backup", "change"] },
+    "record_id": { "type": "string", "minLength": 1 },
+    "owner": { "type": "string", "minLength": 1 },
+    "status": { "type": "string", "minLength": 1 },
+    "event_time": { "type": "string", "format": "date-time" },
+    "scope": { "type": "string", "minLength": 1 },
+    "source_locator": { "type": "string", "minLength": 1 }
+  }
+}
